@@ -29,7 +29,7 @@ void insertbook() {
 	fclose(f);
 
     FILE *d = fopen("index.txt", "w+");
-	  if (d == NULL) { // dosya oluþmamýþsa oluþturacak
+	  if (d == NULL) { // dosya oluÅŸmamÄ±ÅŸsa oluÅŸturacak
 		d = fopen("index.txt", "a+");
 		if (d == NULL) {
 			printf("dosya acilamadi.");
@@ -62,7 +62,7 @@ void insertbook() {
 	else
 	{
 		for (int i = 0;i < 30;i++) {
-			fscanf(f, "%d%d%d%d%d%d\n", &index[i][0], &index[i][1], &index[i][2], &index[i][3], &index[i][4], &index[i][5]); // önceki index bilgilerini tutuyor
+			fscanf(f, "%d%d%d%d%d%d\n", &index[i][0], &index[i][1], &index[i][2], &index[i][3], &index[i][4], &index[i][5]); // Ã¶nceki index bilgilerini tutuyor
 		}
 		hash = num % 30;
 		for (int i = 0;i < 6;i++) {
@@ -73,7 +73,7 @@ void insertbook() {
 		}
 		for (int i = 0;i < 30;i++) {
 			for (int j = 0;j < 6;j++) {
-				fprintf(d, "%d ", index[i][j]); //dolan (deðiþen) yerleri yazýyor
+				fprintf(d, "%d ", index[i][j]); //dolan (deÄŸiÅŸen) yerleri yazÄ±yor
 			}
 			fprintf(d, "\n");
 		}
@@ -104,7 +104,7 @@ void list_all() {
 		if (a == 0) {
 			printf("%d ", a);
 		}
-		else kitapfonk(a); //doluysa kitap ismi yazýlýyor
+		else kitapfonk(a); //doluysa kitap ismi yazÄ±lÄ±yor
 		if (b == 0) {
 			printf("%d ", b);
 		}
@@ -131,7 +131,7 @@ void list_all() {
 }
 void search() {
 	char search[20];
-	printf("aradiginiz kitabýn adini girin.\n");
+	printf("aradiginiz kitabÄ±n adini girin.\n");
 	scanf("%s", search);
 	FILE *f = fopen("books.txt", "r");
 	while (!feof(f)) {
